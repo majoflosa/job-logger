@@ -1,0 +1,97 @@
+.wrap
+    min-height: 85vh
+
+.main
+    background: #ffffff
+    width: 90%
+    max-width: 900px
+    margin: 0 auto
+    padding: 25px
+
+.main__title
+    text-align: center
+    margin: 50px auto
+    color: $midGrey
+    font-weight: normal
+    
+
+.main__job
+    margin-bottom: 15px
+    border-radius: 3px
+    padding: 15px
+    // background: $lightestGrey
+    &:hover
+        background: $lightestGrey
+
+.main__job-hdr
+    padding: 10px 0
+
+.main__job-title
+    margin: 0 auto
+    text-transform: uppercase
+    display: inline-block
+    vertical-align: middle
+
+.main__job-status
+    +mainBtn($primary)
+
+a.main__job-details-link
+    float: right
+    margin: 0 15px 0 0
+    // background: $darkPrimary
+    color: $midGrey
+
+    &:hover
+        svg
+            color: darken($midGrey, 30%)
+    
+    svg
+        font-size: 2em
+
+.main__job-body
+    margin: 15px auto 0
+    display: none
+
+.expanded 
+    margin-bottom: 50px
+    background: $lightestGrey
+    .main__job-body
+        display: block
+
+.main__job-info
+    span
+        display: inline-block
+        vertical-align: middle
+        margin: 0 10px 0 0
+        padding: 6px 10px
+        border-radius: 3px
+        color: #888888
+        background: #ffffff
+        box-shadow: inset 1px 1px 1px rgba(black, 0.15)
+        strong
+            color: #333333
+
+.main__job-notes
+    margin: 10px auto 0
+    p
+        margin: 0 auto
+
+.main__job-ftr
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: lighten($mainFontColor, 20%)
+    font-size: 0.85em
+    font-size: 0.85rem
+    padding: 10px 0 0
+    margin: 10px auto 0
+    border-top: 1px dashed $mainBorderColor
+
+    p
+        margin: 0
+
+.main__job-edit, .main__job-delete
+    margin: 0 0 0 10px
+    display: inline-block
+    &:hover
+        text-decoration: underline

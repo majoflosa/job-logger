@@ -1,0 +1,13 @@
+{
+    "title": "string",
+    "status": "string",
+    "company": {
+        "company-name": "string",
+        "company-url": "string"
+    },
+    "employment-type": "string",
+    "contact": "string",
+    "notes": "string",
+    "date-applied": "date",
+    "applied-through": "string"
+}
