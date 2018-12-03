@@ -1,19 +1,20 @@
 .header
-    // background: $darkPrimary
     background-color: $primary
     color: #ffffff
-    // width: 90%
-    // max-width: 1100px
     margin: 0 auto
     padding: 30px
     display: flex
     justify-content: space-between
     align-items: center
     font-family: $titleFont
-    // font-weight: bold
     font-size: 0.85em
     font-size: 0.85rem
     text-transform: uppercase
 
-.header__navlink
+a.header__navlink
+    color: lighten($primary, 35%)
     margin: 0 8px
+    font-weight: 300
+    letter-spacing: 1px
+    &:hover
+        color: #ffffff
