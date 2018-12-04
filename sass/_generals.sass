@@ -29,3 +29,15 @@ input[type="text"], input[type="password"], input[type="email"], textarea
 
 button
     font-family: inherit
+
+.btn--primary
+    +mainBtn($primary)
+
+.btn--primary-border
+    +borderBtn($primary)
+
+.btn--neutral
+    +mainBtn($midGrey)
+
+.btn--neutral-border
+    +borderBtn($midGrey)

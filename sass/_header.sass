@@ -1,6 +1,7 @@
 .header
-    background-color: $primary
-    color: #ffffff
+    background-color: rgba(white, 0.9)
+    border-bottom: 1px solid lighten($primary, 25%)
+    color: $primary
     margin: 0 auto
     padding: 30px
     display: flex
@@ -10,11 +11,15 @@
     font-size: 0.85em
     font-size: 0.85rem
     text-transform: uppercase
+    position: fixed
+    top: 0
+    width: 100%
+    box-sizing: border-box
 
 a.header__navlink
-    color: lighten($primary, 35%)
+    color: $primary
     margin: 0 8px
     font-weight: 300
     letter-spacing: 1px
     &:hover
-        color: #ffffff
+        color: lighten($primary, 15%)
