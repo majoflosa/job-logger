@@ -38,7 +38,8 @@ button {
   font-family: inherit;
 }
 
-.btn--primary {
+.btn--primary,
+a.btn--primary {
   display: inline-block;
   vertical-align: middle;
   background: #3A82E0;
@@ -52,8 +53,13 @@ button {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
+.btn--primary:focus,
+a.btn--primary:focus {
+  outline: none;
+}
 
-.btn--primary-border {
+.btn--primary-border,
+a.btn--primary-border {
   display: inline-block;
   vertical-align: middle;
   color: #3A82E0;
@@ -66,12 +72,18 @@ button {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
-.btn--primary-border:hover {
+.btn--primary-border:hover,
+a.btn--primary-border:hover {
   background: #3A82E0;
   color: #ffffff;
 }
+.btn--primary-border:focus,
+a.btn--primary-border:focus {
+  outline: none;
+}
 
-.btn--neutral {
+.btn--neutral,
+a.btn--neutral {
   display: inline-block;
   vertical-align: middle;
   background: #bbbbbb;
@@ -85,8 +97,13 @@ button {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
+.btn--neutral:focus,
+a.btn--neutral:focus {
+  outline: none;
+}
 
-.btn--neutral-border {
+.btn--neutral-border,
+a.btn--neutral-border {
   display: inline-block;
   vertical-align: middle;
   color: #bbbbbb;
@@ -99,12 +116,18 @@ button {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
-.btn--neutral-border:hover {
+.btn--neutral-border:hover,
+a.btn--neutral-border:hover {
   background: #bbbbbb;
   color: #ffffff;
 }
+.btn--neutral-border:focus,
+a.btn--neutral-border:focus {
+  outline: none;
+}
 
-.btn--danger {
+.btn--danger,
+a.btn--danger {
   display: inline-block;
   vertical-align: middle;
   background: #e66666;
@@ -118,8 +141,13 @@ button {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
+.btn--danger:focus,
+a.btn--danger:focus {
+  outline: none;
+}
 
-.btn--danger-border {
+.btn--danger-border,
+a.btn--danger-border {
   display: inline-block;
   vertical-align: middle;
   color: #e66666;
@@ -132,38 +160,14 @@ button {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
-.btn--danger-border:hover {
+.btn--danger-border:hover,
+a.btn--danger-border:hover {
   background: #e66666;
   color: #ffffff;
 }
-
-.header {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid #a8c8f1;
-  color: #3A82E0;
-  margin: 0 auto;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Lato", sans-serif;
-  font-size: 0.85em;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-a.header__navlink {
-  color: #3A82E0;
-  margin: 0 8px;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-a.header__navlink:hover {
-  color: #7cacea;
+.btn--danger-border:focus,
+a.btn--danger-border:focus {
+  outline: none;
 }
 
 .wrap {
@@ -208,6 +212,38 @@ a.header__navlink:hover {
 .main__new-job-btn:hover {
   background: #3A82E0;
   color: #ffffff;
+}
+.main__new-job-btn:focus {
+  outline: none;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #a8c8f1;
+  color: #3A82E0;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 0.85em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.header__navlink {
+  color: #3A82E0;
+  margin: 0 8px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+a.header__navlink:hover {
+  color: #7cacea;
 }
 
 .main__job {
@@ -254,6 +290,9 @@ a.header__navlink:hover {
   font-size: 0.85rem;
   letter-spacing: 1px;
 }
+.main__job-status:focus {
+  outline: none;
+}
 
 a.main__job-details-link {
   float: right;
@@ -289,7 +328,7 @@ a.main__job-details-link svg {
   margin: 0 12px 0 0;
   padding: 6px 12px;
   background: #ffffff;
-  border-radius: 100px;
+  border-radius: 3px;
   border: 1px solid #ededed;
   color: #888888;
 }
@@ -311,6 +350,7 @@ a.main__job-details-link svg {
 }
 .main__job-notes strong {
   color: #333333;
+  font-weight: normal;
 }
 .main__job-notes p {
   margin: 10px auto;
@@ -332,6 +372,7 @@ a.main__job-details-link svg {
 }
 .main__job-ftr strong {
   color: #333333;
+  font-weight: normal;
 }
 
 a.main__job-edit, a.main__job-delete {
@@ -353,6 +394,9 @@ a.main__job-edit:hover, a.main__job-delete:hover {
   background: #3A82E0;
   color: #ffffff;
 }
+a.main__job-edit:focus, a.main__job-delete:focus {
+  outline: none;
+}
 
 a.main__job-delete {
   display: inline-block;
@@ -370,6 +414,97 @@ a.main__job-delete {
 a.main__job-delete:hover {
   background: #e66666;
   color: #ffffff;
+}
+a.main__job-delete:focus {
+  outline: none;
+}
+
+.main__asset {
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 15px;
+  background: #fafafa;
+}
+.main__asset .fa-caret-circle-up {
+  display: none;
+}
+
+.main__asset-header {
+  padding: 10px 0;
+}
+.main__asset-header:hover {
+  cursor: pointer;
+}
+.main__asset-header:hover svg {
+  color: #3A82E0;
+}
+
+.main__asset-title {
+  margin: 0 auto;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a.main__asset-details-link {
+  float: right;
+  margin: -3px 15px 0 0;
+  color: #bbbbbb;
+}
+a.main__asset-details-link svg {
+  font-size: 2em;
+}
+
+.expanded .main__asset-body {
+  display: block;
+}
+.expanded .fa-caret-circle-up {
+  display: inline-block;
+  color: #3A82E0;
+}
+.expanded .fa-caret-circle-down {
+  display: none;
+}
+
+.main__asset-body {
+  margin: 15px auto 0;
+  display: none;
+}
+
+.main__asset-link {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  background: #fdfdfd;
+}
+.main__asset-link span {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+a.main__asset-link-url {
+  display: inline-block;
+  margin-left: 30px;
+  color: #bbbbbb;
+}
+a.main__asset-link-url:hover {
+  text-decoration: underline;
+}
+
+.main__asset-template-text {
+  display: inline-block;
+  margin: 15px 0 0 0;
+  color: #bbbbbb;
+  clear: both;
+  width: 100%;
+}
+.main__asset-template-text a {
+  color: #3A82E0;
+}
+.main__asset-template-text a:hover {
+  text-decoration: underline;
 }
 
 .footer {

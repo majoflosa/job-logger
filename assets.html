@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Job Hunter Prototype</title>
+    <link rel="stylesheet" href="fa-pro/css/fa-svg-with-js.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">LOGO</div>
+
+        <nav logo="header__nav">
+            <a href="/" class="header__navlink">My Applications</a>
+            <a href="/assets.html" class="header__navlink header__navlink--active">My Assets</a>
+            <a href="/help.html" class="header__navlink">Help</a>
+            <a href="#" class="header__navlink">Sign Out</a>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section class="main">
+
+            <h1 class="main__title">
+                <span>My Application Assets</span>
+                <!-- <button class="main__new-job-btn">+ Add</button> -->
+            </h1>
+
+            <section class="main__assets-list">
+                <article class="main__asset main__asset--links">
+                    <header class="main__asset-header">
+                        <h3 class="main__asset-title">My Links</h3>
+                        <a href="#" class="main__asset-details-link">
+                            <i class="far fa-caret-circle-down"></i>
+                            <i class="far fa-caret-circle-up"></i>
+                        </a>
+                    </header>
+                    <main class="main__asset-body">
+                        <!-- <div class="main__asset-link">
+                            <span>ADD NEW</span>
+                            <a href="http://maurojflores.com" target="_blank" class="main__asset-link-url">
+                                http://maurojflores.com
+                            </a>
+                            <button class="btn--primary copy-link">Save</button>
+                        </div> -->
+                        <div class="main__asset-link">
+                            <span>My Website</span>
+                            <a href="http://maurojflores.com" target="_blank" class="main__asset-link-url">
+                                http://maurojflores.com
+                            </a>
+                            <button class="btn--primary copy-link">Copy URL</button>
+                        </div>
+                        <div class="main__asset-link">
+                            <span>My LinkedIn Profile</span>
+                            <a href="https://www.linkedin.com/in/mauriciojflores/" target="_blank" class="main__asset-link-url">
+                                https://www.linkedin.com/in/mauriciojflores/
+                            </a>
+                            <button class="btn--primary copy-link">Copy URL</button>
+                        </div>
+                        <div class="main__asset-link">
+                            <span>My GitHub Profile</span>
+                            <a href="https://github.com/majoflosa" target="_blank" class="main__asset-link-url">
+                                https://github.com/majoflosa
+                            </a>
+                            <button class="btn--primary copy-link">Copy URL</button>
+                        </div>
+                        <div class="main__asset-link">
+                            <span>My StackOverflow Profile</span>
+                            <a href="https://stackoverflow.com/users/story/10267066" target="_blank" class="main__asset-link-url">
+                                https://stackoverflow.com/users/story/10267066
+                            </a>
+                            <button class="btn--primary copy-link">Copy URL</button>
+                        </div>
+                        <div class="main__asset-link">
+                            <span>My Toptal Profile</span>
+                            <a href="https://www.toptal.com/resume/mauricio-jose-flores" target="_blank" class="main__asset-link-url">
+                                https://www.toptal.com/resume/mauricio-jose-flores
+                            </a>
+                            <button class="btn--primary copy-link">Copy URL</button>
+                        </div>
+                    </main>
+                </article>
+
+                <article class="main__asset main__asset--resume">
+                    <header class="main__asset-header">
+                        <h3 class="main__asset-title">My Resume</h3>
+                        <a href="#" class="main__asset-details-link">
+                            <i class="far fa-caret-circle-down"></i>
+                            <i class="far fa-caret-circle-up"></i>
+                        </a>
+                    </header>
+                    <main class="main__asset-body">
+                        <div class="main__asset-link">
+                            <span>My Resume</span>
+                            <a href="http://maurojflores.com/wp-content/uploads/2018/10/Mauricio-Flores-RESUME-2018.pdf" target="_blank" class="main__asset-link-url">
+                                http://maurojflores.com/wp-con...pdf
+                            </a>
+                            <button class="btn--primary copy-link">Copy URL</button>
+                            <a href="#" download class="btn--primary">Download</a>
+                        </div>
+                    </main>
+                </article>
+
+                <article class="main__asset main__asset--templates">
+                        <header class="main__asset-header">
+                            <h3 class="main__asset-title">My Cover Letter Templates</h3>
+                            <a href="#" class="main__asset-details-link">
+                                <i class="far fa-caret-circle-down"></i>
+                                <i class="far fa-caret-circle-up"></i>
+                            </a>
+                        </header>
+                        <main class="main__asset-body">
+                            <div class="main__asset-link">
+                                <span>Template A</span>
+                                <button class="btn--primary copy-text">Copy text</button>
+                                <!-- <a href="#" class="btn--primary">Details</a> -->
+                                <p href="#" target="_blank" class="main__asset-template-text">
+                                    Dear [Company] staff, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis metus enim. Proin suscipit in nisl vel vehicula. Donec sem sapien, mollis in malesuada eu, scelerisque non ipsum. Etiam vehicula est vel...
+                                    <a href="#">See more</a>
+                                </p>
+                            </div>
+                            <div class="main__asset-link">
+                                <span>Template B</span>
+                                <button class="btn--primary copy-text">Copy text</button>
+                                <!-- <a href="#" class="btn--primary">Details</a> -->
+                                <p href="#" target="_blank" class="main__asset-template-text">
+                                    Dear [Company] staff, In luctus volutpat lorem, nec aliquam nunc mattis in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus leo libero, mollis ac mattis nec, gravida maximus orci...
+                                    <a href="#">See more</a>
+                                </p>
+                            </div>
+                        </main>
+                    </article>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__info">2018 &copy; Mauricio J Flores. All rights reserved.</div>
+    </footer>
+
+    <section class="template-modal modal">
+        <div class="template-modal__inner modal__inner">
+
+            <header class="template-modal__header modal__header">
+                <h1 class="template-modal__title modal__title"></h1>
+                <a href="#" class="template-modal__close modal__close"><span>Close</span> <i class="fal fa-times"></i></a>
+            </header>
+
+            <main class="template-modal__body modal__body">
+                <div class="modal__field-group template-modal__field-group">
+                    <label for="template-title">Template title</label>
+                    <input type="text" id="template-title" placeholder="Template A" value="Template A">
+                </div>
+
+                <div class="modal__field-group template-modal__field-group">
+                    <label for="template-title">Template Message</label>
+                    <textarea type="text" id="template-title" placeholder="Dear Staff..." rows="15">
+Dear [NAME],
+
+I saw the listing for the [JOB TITLE] post, and would like to express my interest in this position.
+
+Bridging the gap between design and web technologies is the best way to describe the kind of work I've done for the past 3 and a half years as a remote freelance developer. I started out as a web designer, and have grown more and more enthusiastic about web development, either with WordPress or a front-end framework like React. Turning mockups (occasionally of my own design) into fully functional live websites is what I enjoy the most.
+
+Most of the skills and requirements in the description are already under my tool belt, including [SKILLS HERE]. This strong match between my skill set and the profile description, as well as good communication skills, collaboration spirit, and eagerness to learn and grow, is why I believe I'd be a great fit for the job.
+
+Thanks in advance for considering this application, and I look forward to hearing of a chance to continue the process.
+                    </textarea>
+                </div>
+            </main>
+            <div class="template-modal__buttons modal__buttons">
+                <button class="btn--primary">Save</button>
+                <button class="btn--neutral-border">Reset</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="fa-pro/js/fontawesome-all.min.js"></script>
+    <script>
+        let $mainAssets = [...document.querySelectorAll('.main__asset')];
+        $mainAssets.forEach( asset => {
+            let $header = asset.querySelector('.main__asset-header');
+            $header.addEventListener('click', event => {
+                console.log( 'clicked' );
+                event.preventDefault();
+                asset.classList.toggle('expanded');
+            });
+        });
+
+
+        function copyToClipboard( e, str ) {
+            const el = document.createElement('textarea');
+            el.value = str;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-99999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+
+        const $copyBtns = [...document.querySelectorAll('.copy-link')];
+        $copyBtns.forEach( $btn => {
+            const url = $btn.previousElementSibling.attributes.href.value;
+            $btn.addEventListener('click', (e) => copyToClipboard(e, url));
+        });
+
+        let $seeMoreBtn = document.querySelector('.main__asset-template-text a');
+        let $closeTemplateModal = document.querySelector('.template-modal__close');
+        let $templateModal = document.querySelector('.template-modal');
+        $seeMoreBtn.addEventListener('click', event => {
+            event.preventDefault();
+            $templateModal.classList.add('showing');
+        });
+        $closeTemplateModal.addEventListener('click', event => {
+            event.preventDefault();
+            $templateModal.classList.remove('showing');
+        });
+    </script>
+</body>
+</html>

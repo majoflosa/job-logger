@@ -30,20 +30,54 @@ input[type="text"], input[type="password"], input[type="email"], textarea
 button
     font-family: inherit
 
-.btn--primary
+.btn--primary,
+a.btn--primary
     +mainBtn($primary)
 
-.btn--primary-border
+.btn--primary-border,
+a.btn--primary-border
     +borderBtn($primary)
 
-.btn--neutral
+.btn--neutral,
+a.btn--neutral
     +mainBtn($midGrey)
 
-.btn--neutral-border
+.btn--neutral-border,
+a.btn--neutral-border
     +borderBtn($midGrey)
 
-.btn--danger
+.btn--danger,
+a.btn--danger
     +mainBtn($dangerColor)
 
-.btn--danger-border
+.btn--danger-border,
+a.btn--danger-border
     +borderBtn($dangerColor)
+
+
+
+.wrap
+    min-height: 78vh
+
+.main
+    background: #ffffff
+    width: 90%
+    max-width: 900px
+    margin: 50px auto
+    padding: 25px
+
+.main__title
+    padding: 0 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 50px auto
+    color: darken($midGrey, 25%)
+    font-weight: 100
+    letter-spacing: 1px
+    text-transform: uppercase
+
+.main__new-job-btn
+    +borderBtn
+    font-size: 1.2em
+    font-size: 1.2rem
