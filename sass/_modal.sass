@@ -1,4 +1,4 @@
-.job-modal
+.modal
     position: fixed
     top: 0
     left: 0
@@ -10,17 +10,17 @@
     &.showing
         display: block
 
-.job-modal__inner
+.modal__inner
     width: 90%
     max-width: 700px
     margin: 50px auto
 
-.job-modal__header
+.modal__header
     display: flex
     justify-content: space-between
     align-items: center
 
-a.job-modal__close
+a.modal__close
     top: 30px
     right: 50px
     color: $midGrey
@@ -31,21 +31,23 @@ a.job-modal__close
         vertical-align: bottom
     .fa-times
         font-size: 1.25em
-        margin: 0 0 0 5px
+        margin: 0 0 -2px 5px
 
-.job-modal__title
+.modal__title
     text-align: center
     text-transform: uppercase
     font-weight: 100
 
-.job-modal__body
+.modal__body
     background: $lightestGrey
     padding: 30px
     border-radius: 3px
     margin: 30px auto
 
-.job-modal__field-group
-    margin: 0 0 20px
+.modal__field-group
+    margin: 0 0 30px
+    &:last-child
+        margin-bottom: 0
 
     label
         display: block
@@ -66,8 +68,16 @@ a.job-modal__close
         &::placeholder
             color: lighten($midGrey, 10%)
 
-.job-modal__buttons
+.modal__buttons
     // text-align: center
     button
         font-size: 1.2em
         padding: 12px 30px
+
+.delete-modal__inner
+    text-align: center
+    
+    .btn--danger-border
+        background: transparent
+        &:hover
+            background: $dangerColor

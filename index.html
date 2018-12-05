@@ -128,15 +128,15 @@
                         </header>
                         <div class="main__job-body">
                             <main class="main__job-info">
-                                <span class="main__job-contract">Contract type: <strong>Full Time</strong></span>
+                                <!-- <span class="main__job-contract">Contract type: <strong>Full Time</strong></span>
                                 <span class="main__job-contact">Contact: <strong>mike@s13a.com</strong></span>
                                 <div class="main__job-notes">
                                     <strong>Notes:</strong>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec enim nunc. Duis dolor nulla, vulputate sed elementum et, convallis ut mauris. Morbi sem metus, ornare nec facilisis at, pellentesque id metus.</p>
-                                </div>
+                                </div> -->
                             </main>
                             <footer class="main__job-ftr">
-                                <p>Applied on <strong>November 13, 2018</strong> through <strong>email</strong></p>
+                                <p><!-- Applied on <strong>November 13, 2018</strong> through <strong>email</strong> --></p>
                                 <div class="main__job-buttons clearfix-after">
                                     <a href="#" class="main__job-edit">Edit</a>
                                     <a href="#" class="main__job-delete">Delete</a>
@@ -183,57 +183,88 @@
         <div class="footer__info">2018 &copy; Mauricio J Flores. All rights reserved.</div>
     </footer>
 
-    <section class="job-modal">
-        <div class="job-modal__inner">
+    <section class="job-modal modal">
+        <div class="job-modal__inner modal__inner">
             
-            <header class="job-modal__header">
-                <h1 class="job-modal__title">Edit Application Information</h1>
-                <a href="#" class="job-modal__close"><span>Close</span> <i class="fal fa-times"></i></a>
+            <header class="job-modal__header modal__header">
+                <h1 class="job-modal__title modal__title">Edit Application Information</h1>
+                <a href="#" class="job-modal__close modal__close"><span>Close</span> <i class="fal fa-times"></i></a>
                 <!-- <h3 class="edit-modal__subtitle">Front End Developer</h3> -->
             </header>
 
-            <main class="job-modal__body">
-                <div class="job-modal__field-group">
-                    <label for="job-title">Job Position</label>
+            <main class="job-modal__body modal__body">
+                <div class="job-modal__field-group modal__field-group">
+                    <label for="job-title">Job Position (required)</label>
                     <input type="text" id="job-title" placeholder="Front End Developer">
                 </div>
+
+                <div class="job-modal__field-group modal__field-group">
+                    <label for="job-url">Job Posting URL</label>
+                    <input type="text" id="job-url" placeholder="http://www.jobs.com/1234">
+                </div>
                 
-                <div class="job-modal__field-group">
-                    <label for="job-company">Company</label>
+                <div class="job-modal__field-group modal__field-group">
+                    <label for="job-company">Company (required)</label>
                     <input type="text" id="job-company" placeholder="Company name">
                 </div>
                 
-                <div class="job-modal__field-group">
+                <div class="job-modal__field-group modal__field-group">
+                    <label for="job-company-url">Company Website</label>
+                    <input type="text" id="job-company-url" placeholder="http://www.companyname.com/">
+                </div>
+                
+                <div class="job-modal__field-group modal__field-group">
                     <label for="job-contract">Contract Type</label>
                     <input type="text" id="job-contract" placeholder="Full-time, Part-time, Hourly, etc.">
                 </div>
 
-                <div class="job-modal__field-group">
+                <div class="job-modal__field-group modal__field-group">
                     <label for="job-contact">Contact</label>
                     <input type="text" id="job-contact" placeholder="jobs@companysite.com">
                 </div>
 
-                <div class="job-modal__field-group">
+                <div class="job-modal__field-group modal__field-group">
                     <label for="job-notes">Notes</label>
                     <textarea type="text" id="job-notes" placeholder="About this job..."></textarea>
                 </div>
 
-                <div class="job-modal__field-group">
+                <div class="job-modal__field-group modal__field-group">
                     <label for="applied-on">Applied on</label>
                     <input type="text" id="applied-on" placeholder="YYYY-MM-DD">
                 </div>
 
-                <div class="job-modal__field-group">
+                <div class="job-modal__field-group modal__field-group">
                     <label for="applied-through">Applied through</label>
                     <input type="text" id="applied-through" placeholder="LinkedIn, Company website, email, etc.">
                 </div>
 
             </main>
             
-            <div class="job-modal__buttons">
+            <div class="job-modal__buttons modal__buttons">
                 <button class="btn--primary">Save</button>
                 <button class="btn--neutral-border">Reset</button>
             </div>
+        </div>
+    </section>
+
+    <section class="delete-modal modal">
+        <div class="delete-modal__inner modal__inner">
+
+            <header class="delete-modal__header modal__header">
+                <h1 class="delete-modal__title modal__title">Delete Application</h1>
+                <a href="#" class="delete-modal__close modal__close"><span>Close</span> <i class="fal fa-times"></i></a>
+            </header>
+
+            <main class="delete-modal__body modal__body">
+                <p class="delete-modal__confirmation-msg">
+                    This action cannot be reverted. Are you sure you want to delete this application?
+                    <div class="delete-modal__buttons modal__buttons">
+                        <button class="btn--neutral">Cancel</button>
+                        <button class="btn--danger-border">Confirm Delete</button>
+                    </div>
+                </p>
+            </main>
+
         </div>
     </section>
 
@@ -251,17 +282,27 @@
         });
 
         let $newJobBtn = document.querySelector('.main__new-job-btn');
-        let $closeModal = document.querySelector('.job-modal__close');
-        let $modal = document.querySelector('.job-modal');
+        let $closeJobModal = document.querySelector('.job-modal__close');
+        let $jobModal = document.querySelector('.job-modal');
         $newJobBtn.addEventListener('click', event => {
             event.preventDefault();
-
-            $modal.classList.add('showing');
+            $jobModal.classList.add('showing');
         });
-        $closeModal.addEventListener('click', event => {
+        $closeJobModal.addEventListener('click', event => {
             event.preventDefault();
+            $jobModal.classList.remove('showing');
+        });
 
-            $modal.classList.remove('showing');
+        let $deleteJobBtn = document.querySelector('.main__job-delete');
+        let $closeDeleteModal = document.querySelector('.delete-modal__close');
+        let $deleteModal = document.querySelector('.delete-modal');
+        $deleteJobBtn.addEventListener('click', event => {
+            event.preventDefault();
+            $deleteModal.classList.add('showing');
+        });
+        $closeDeleteModal.addEventListener('click', event => {
+            event.preventDefault();
+            $deleteModal.classList.remove('showing');
         });
     </script>
 </body>

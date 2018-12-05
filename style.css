@@ -104,6 +104,39 @@ button {
   color: #ffffff;
 }
 
+.btn--danger {
+  display: inline-block;
+  vertical-align: middle;
+  background: #e66666;
+  color: #ffffff;
+  padding: 6px 12px;
+  margin-left: 8px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.btn--danger-border {
+  display: inline-block;
+  vertical-align: middle;
+  color: #e66666;
+  padding: 6px 12px;
+  margin-left: 8px;
+  border-radius: 100px;
+  border: 1px solid #e66666;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.btn--danger-border:hover {
+  background: #e66666;
+  color: #ffffff;
+}
+
 .header {
   background-color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid #a8c8f1;
@@ -346,7 +379,7 @@ a.main__job-delete:hover {
   border-top: 1px solid #dddddd;
 }
 
-.job-modal {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -356,61 +389,64 @@ a.main__job-delete:hover {
   overflow: scroll;
   display: none;
 }
-.job-modal.showing {
+.modal.showing {
   display: block;
 }
 
-.job-modal__inner {
+.modal__inner {
   width: 90%;
   max-width: 700px;
   margin: 50px auto;
 }
 
-.job-modal__header {
+.modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-a.job-modal__close {
+a.modal__close {
   top: 30px;
   right: 50px;
   color: #bbbbbb;
 }
-a.job-modal__close:hover {
+a.modal__close:hover {
   color: #888888;
 }
-a.job-modal__close * {
+a.modal__close * {
   display: inline-block;
   vertical-align: bottom;
 }
-a.job-modal__close .fa-times {
+a.modal__close .fa-times {
   font-size: 1.25em;
-  margin: 0 0 0 5px;
+  margin: 0 0 -2px 5px;
 }
 
-.job-modal__title {
+.modal__title {
   text-align: center;
   text-transform: uppercase;
   font-weight: 100;
 }
 
-.job-modal__body {
+.modal__body {
   background: #fafafa;
   padding: 30px;
   border-radius: 3px;
   margin: 30px auto;
 }
 
-.job-modal__field-group {
-  margin: 0 0 20px;
+.modal__field-group {
+  margin: 0 0 30px;
 }
-.job-modal__field-group label {
+.modal__field-group:last-child {
+  margin-bottom: 0;
+}
+.modal__field-group label {
   display: block;
   margin: 0 0 8px;
   color: #888888;
 }
-.job-modal__field-group input[type="text"], .job-modal__field-group textarea {
+.modal__field-group input[type="text"], .modal__field-group textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 10px 16px;
@@ -419,17 +455,27 @@ a.job-modal__close .fa-times {
   border-radius: 3px;
   border: 1px solid #dddddd;
 }
-.job-modal__field-group input[type="text"]:focus, .job-modal__field-group textarea:focus {
+.modal__field-group input[type="text"]:focus, .modal__field-group textarea:focus {
   border-color: #3A82E0;
   outline: none;
 }
-.job-modal__field-group input[type="text"]::placeholder, .job-modal__field-group textarea::placeholder {
+.modal__field-group input[type="text"]::placeholder, .modal__field-group textarea::placeholder {
   color: #d5d5d5;
 }
 
-.job-modal__buttons button {
+.modal__buttons button {
   font-size: 1.2em;
   padding: 12px 30px;
+}
+
+.delete-modal__inner {
+  text-align: center;
+}
+.delete-modal__inner .btn--danger-border {
+  background: transparent;
+}
+.delete-modal__inner .btn--danger-border:hover {
+  background: #e66666;
 }
 
 /*# sourceMappingURL=style.css.map */
